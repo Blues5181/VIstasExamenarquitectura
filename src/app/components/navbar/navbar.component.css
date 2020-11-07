@@ -1,0 +1,16 @@
+.navbar{
+height: 79px;
+
+background-color: #003e7c !important;
+}
+.navbar-logo{
+    display: inline-block;
+    vertical-align: middle;
+    width: 70px;
+  }
+  .navbar-logo img{
+    display: block;
+    width: 200%;
+    height: auto;
+  }
+

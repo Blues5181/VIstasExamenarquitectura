@@ -1,0 +1,21 @@
+<div class="table-container mt-4">
+    <table class="table-rwd">
+        <thead>
+            <th style="width: 100px" scope="col" class="tb-title table-primary">No.</th>
+            <th scope="col" class="tb-title table-primary">Nombre solicitante</th>
+            <th style="width: 100px" scope="col" class="tb-title table-primary">Nombre Comercio</th>
+            <th style="width: 100px" scope="col" class="tb-title table-primary" >Acciones</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let solicitud of salasService.solicitudes; let no =index">
+                <td>{{no}}</td>
+                <td>{{solicitud.user.nombre}}</td>
+                <td>{{solicitud.comercio.nombre}}</td>
+                <td ng-if="showTooltip" class="text-center">
+                    <i class="fa fa-check" style="margin-right: 15px;" aria-hidden="true" data-toggle="tooltip" data-placement="right" data-original-title="Edit" title="Edit institution" (click)="procesarSolicitud(solicitud._id,'A')"></i>
+                    <i class="fa fa-times" aria-hidden="true" data-toggle="tooltip" data-placement="right" data-original-title="Delete" title="Delete institution" data-toggle="modal" data-target="#deleteConfirmation" (click)="procesarSolicitud(solicitud._id,'D')"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,51 @@
+.container contact-form{
+
+    justify-content: center;
+    align-items: center;
+
+}
+.table-rwd {
+    font-size: 0.85em;
+    border: 1px solid transparent;
+    color: #666;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table-rwd td,
+.table-rwd th {
+    padding: 0.8em;
+    border-bottom: 1px solid transparent;
+}
+
+.table-rwd th {
+    background: #cb3234;
+    color: #fff;
+    font-weight: normal;
+    text-align: left;
+}
+
+.table-rwd td {
+    text-align: left;
+}
+
+.table-rwd td:first-of-type {
+    text-align: left;
+}
+
+.table-rwd tr:hover {
+    background: #0d0e12;
+}
+
+.table-rwd tr:nth-child(even) {
+    background: #0d0e12;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.table-rwd {
+    min-width: 1048px;
+}

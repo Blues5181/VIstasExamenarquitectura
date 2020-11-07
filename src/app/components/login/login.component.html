@@ -1,0 +1,34 @@
+<div class="limiter">
+  <div class="container">
+    <img class="pic" src="public/imgs/user.png" alt="IMG">
+    <div class="wrap">
+      <form class="form validate-form" (ngSubmit)="onLoginUser()">
+        <span class="form-title">
+          Inicio de Sesión
+        </span>
+
+        <div class="wrap-input">
+          <input class="input" name="username" placeholder="Nombre" [(ngModel)]="username">
+          <span class="focus-input"></span>
+          <span class="symbol-input">
+            <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+          </span>
+        </div>
+        <div class="wrap-input">
+            <input class="input" name="password" type="password" placeholder="Contrasena" [(ngModel)]="password">
+            <span class="focus-input"></span>
+            <span class="symbol-input">
+              <i class="fa fa-lock fa-lg" aria-hidden="true"></i>
+            </span>
+          </div>
+
+        <div class="container-form-btn">
+          <button type="submit" class="main-button icon-button">
+            Inicias Sesión
+          </button>
+        </div>
+        <a class="btn btn-link col-md-12 mt-2" [routerLink]="['/signup']">Crear Cuenta.</a>
+      </form>
+    </div>
+  </div>
+</div>

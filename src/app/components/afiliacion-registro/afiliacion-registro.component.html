@@ -1,0 +1,91 @@
+<div class="container contact-form">
+    <h1>Solicitud de Afiliacion</h1>
+    <hr>
+    <form class="form validate-form" (ngSubmit)="createSolicitud()">
+        <div class="row">
+        
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Nombre Empresa</label>
+                    <input name="nombreComercio" type="text" class="form-control" [(ngModel)]="nombreComercio">
+                </div>
+            
+                <div class="form-group">
+                    <label>Ofrece</label>
+                    <input name="tipoServicio" type="text" class="form-control" [(ngModel)]="tipoServicio">
+                </div>
+                
+                <div class="form-group">
+                    <label>Giro de la Empresa: </label>
+                    <select name="Finentech"  id="selector1">
+                        <option value="Fintech">Fintech</option> 
+                        <option value="Servicios Especializados">Servicios Especializados</option>
+                        <option value="Informatica">Informatica</option>
+                        <option value="Computacion">Computacion</option>
+                        <option value="Asesoria">Asesoria</option>
+                        <option value="Diseno">Diseno</option>
+                        <option value="Accessorios">Accessorios</option>
+                        <option value="Alimentos">Alimentos</option>
+                        <option value="Hobbies">Hobbies</option>
+                        <option value="Ropa y moda">Ropa y moda</option>
+                    </select>
+                </div>
+                
+                
+                
+
+                
+    
+
+            </div>
+
+            <div class="col-md-6">
+                
+
+                <div class="form-group">
+                    <label>Correo Electronico</label>
+                    <input name="correoComercio" type="text" class="form-control"[(ngModel)]="correoComercio">
+                </div>
+
+                
+
+             
+
+                <div class="form-group">
+                    <label>Observacion</label>
+                    <textarea name="descripcion" class="form-control" rows="7"[(ngModel)]="descripcion" ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary btn-block" value="Enviar">
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+
+
+    
+</div>
+<div class="table-container mt-4">
+    <table class="table-rwd">
+        <thead>
+            <th style="width: 100px" scope="col" class="tb-title table-primary">No.</th>
+            <th scope="col" class="tb-title table-primary">Nombre solicitante</th>
+            <th style="width: 100px" scope="col" class="tb-title table-primary">Nombre Comercio</th>
+            <th style="width: 100px" scope="col" class="tb-title table-primary" >Acciones</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let solicitud of salasService.solicitudes; let no =index">
+                <td>{{no}}</td>
+                <td>{{solicitud.user.nombre}}</td>
+                <td>{{solicitud.comercio.nombre}}</td>
+                <td ng-if="showTooltip" class="text-center">
+                   <i class="fa fa-eye" aria-hidden="true" data-toggle="tooltip" data-placement="right" data-original-title="Delete" title="Delete institution" data-toggle="modal" data-target="#deleteConfirmation" (click)="mostrarEstadoSolicitud(solicitud._id)"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

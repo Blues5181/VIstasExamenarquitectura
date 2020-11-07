@@ -1,0 +1,70 @@
+<div class="limiter">
+    <div class="container">
+      <img class="pic" src="public/imgs/registro.png" alt="IMG">
+      <div class="wrap">
+        <form class="form validate-form" (ngSubmit)="onSignupUser()">
+          <span class="form-title">
+            Registrarse
+          </span>
+          <div class="wrap-input">
+            <input class="input" name="nombre" placeholder="nombre" [(ngModel)]="nombre">
+            <span class="focus-input"></span>
+            <span class="symbol-input">
+              <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+            </span>
+          </div>
+          <div class="wrap-input">
+            <input class="input" name="apellido"  placeholder="Apellido"  [(ngModel)]="apellido" >
+            <span class="focus-input"></span>
+            <span class="symbol-input">
+              <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+            </span>
+          </div>
+          <div class="wrap-input">
+            <input class="input"  name="telefono" placeholder="Numero de Telefono"  [(ngModel)]="telefono" >
+            <span class="focus-input"></span>
+            <span class="symbol-input">
+              <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+            </span>
+          </div>
+          <div class="wrap-input">
+            <input class="input"  name="correo" placeholder="Correo Electronico"  [(ngModel)]="correo" >
+            <span class="focus-input"></span>
+            <span class="symbol-input">
+              <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+            </span>
+          </div>
+          <div class="wrap-input">
+            <input class="input" name="fechaNacimiento" placeholder="Fecha Nacimiento"[(ngModel)]="fechaNacimiento" >
+            <span class="focus-input"></span>
+            <span class="symbol-input">
+              <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+            </span>
+          </div>
+
+          <div class="wrap-input">
+            <input class="input" name="username" placeholder="username" [(ngModel)]="username">
+            <span class="focus-input"></span>
+            <span class="symbol-input">
+              <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+            </span>
+          </div>
+          <div class="wrap-input">
+              <input class="input" name="password" type="password" placeholder="password" [(ngModel)]="password">
+              <span class="focus-input"></span>
+              <span class="symbol-input">
+                <i class="fa fa-lock fa-lg" aria-hidden="true"></i>
+              </span>
+            </div>
+  
+          <div class="container-form-btn">
+            <button type="submit" class="main-button icon-button">
+              AFiliacion
+            </button>
+          </div>
+          <a class="btn btn-link col-md-12 mt-2" [routerLink]="['/login']">Ya poseo una cuenta.</a>
+        </form>
+      </div>
+    </div>
+  </div>
+  
